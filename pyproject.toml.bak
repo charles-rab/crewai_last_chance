@@ -1,0 +1,23 @@
+[project] 
+name = "crewai_last_chance" 
+version = "0.1.0" 
+description = "Crewai_Last_Chance using crewAI" 
+authors = [{ name = "Charles Rabico", email = "c.rabico@revivastudios.online" }] 
+requires-python = ">=3.10,^<3.13" 
+dependencies = [ 
+    "crewai[tools]>=0.114.0,^<1.0.0" 
+] 
+ 
+[project.scripts] 
+crewai_last_chance = "crewai_last_chance.main:run" 
+run_crew = "crewai_last_chance.main:run" 
+train = "crewai_last_chance.main:train" 
+replay = "crewai_last_chance.main:replay" 
+test = "crewai_last_chance.main:test" 
+ 
+[build-system] 
+requires = ["hatchling"] 
+build-backend = "hatchling.build" 
+ 
+[tool.crewai] 
+type = "crew" 
