@@ -24,5 +24,3 @@ build-backend = "hatchling.build"
 
 [tool.crewai]
 type = "crew"
-
-.venv\Scripts\activate
