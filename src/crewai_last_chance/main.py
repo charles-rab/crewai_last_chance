@@ -20,10 +20,15 @@ def main():
     print(result)
     
     # Save the result to a file
-    with open("output/shopify_automation_report.md", "w") as f:
+    import os
+    output_dir = os.path.join(os.getcwd(), "output")
+    os.makedirs(output_dir, exist_ok=True)
+    output_file = os.path.join(output_dir, "shopify_automation_report.md")
+    
+    with open(output_file, "w") as f:
         f.write(result)
     
-    print("\nShopify automation report saved to output/shopify_automation_report.md")
+    print(f"\nShopify automation report saved to {output_file}")
 
 if __name__ == "__main__":
     main()
